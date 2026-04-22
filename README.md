@@ -40,31 +40,7 @@ python-quest/
 
 ### A través de la página de githubpages
 
-### Opción B: Desde la terminal
 
-```bash
-# Crear carpeta
-mkdir python-quest
-cd python-quest
-
-# Inicializar Git
-git init
-git config user.name "Tu Nombre"
-git config user.email "tu@email.com"
-
-# Copiar los archivos aquí (index.html, style.css, script.js, README.md)
-# Luego:
-
-git add .
-git commit -m "Python Quest - Plataforma de aprendizaje interactivo"
-
-# Crear repositorio en GitHub primero, luego:
-git remote add origin https://github.com/tu-usuario/python-quest.git
-git branch -M main
-git push -u origin main
-```
-
-Luego activa GitHub Pages en Settings (ver "Opción A" paso 3).
 
 ## 🎮 Cómo Jugar
 
