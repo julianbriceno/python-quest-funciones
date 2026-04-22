@@ -58,11 +58,9 @@ python-quest/
 2. Usa pistas si las necesitas
 3. Escribe tu solución Python
 4. Presiona ▶ EJECUTAR CÓDIGO
-5. Si pasan todos los tests → **SIGUIENTE se desbloquea**
-6. Si hay error → Recibe ayuda específica
+5. Si hay error → Recibe ayuda específica
 
 ### 4️⃣ Bloqueos de Seguridad
-- ❌ **No puedes saltar niveles** - debes hacerlos en orden
 - ❌ **No puedes avanzar sin completar** - cada nivel valida antes de desbloquear
 - ✅ **Puedes retroceder** - vuelve a niveles anteriores
 
