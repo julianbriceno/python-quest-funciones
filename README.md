@@ -38,32 +38,9 @@ python-quest/
 
 ## 🌐 Deploy a GitHub Pages (RECOMENDADO)
 
-### Opción A: Desde GitHub.com (más fácil)
+### A través de la página de githubpages
 
-1. **Abre GitHub.com** → inicia sesión → crea un nuevo repositorio
-   - Nombre: `python-quest` (o el que prefieras)
-   - Descripción: "Plataforma interactiva de Python"
-   - ✅ Marca "Public"
-   - No inicialices con README (ya tienes uno)
-
-2. **Carga los archivos:**
-   - Click en "uploading an existing file"
-   - Arrastra los 4 archivos (index.html, style.css, script.js, README.md)
-   - Click "Commit changes"
-
-3. **Activa GitHub Pages:**
-   - Ve a Settings (⚙️)
-   - Scroll a "GitHub Pages"
-   - Branch: `main`
-   - Folder: `/ (root)`
-   - Click "Save"
-
-4. **¡Listo!** Tu juego estará en:
-   ```
-   https://tu-usuario.github.io/python-quest/
-   ```
-
-### Opción B: Desde la terminal (si tienes Git)
+### Opción B: Desde la terminal
 
 ```bash
 # Crear carpeta
