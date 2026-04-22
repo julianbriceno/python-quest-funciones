@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Quest - Matrix Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
+</head>
+<body>
+
+<canvas id="matrix-canvas"></canvas>
+
+<!-- PORTADA/INICIO -->
+<div id="portada" class="portada visible">
+    <div class="portada-content">
+        <div class="portada-title">🔐 PYTHON QUEST</div>
+        <div class="portada-subtitle">MATRIX EDITION</div>
+        <div class="portada-description">
+            <p>> Bienvenido, hacker. El sistema principal ha sido comprometido.</p>
+            <p>> Se requiere un agente especializado en Python para infiltrarse.</p>
+            <p>&nbsp;</p>
+            <p>> Tu misión: Completa 12 desafíos de programación en orden.</p>
+            <p>> Cada nivel desbloqueará el siguiente una vez validado.</p>
+            <p>> Sin excepciones. Sin saltos. La lógica es la ley.</p>
+            <p>&nbsp;</p>
+            <p>> ¿Estás listo? El sistema te espera...</p>
+        </div>
+        <button id="btn-iniciar" class="btn-iniciar" onclick="startGame()">
+            ▶ INGRESAR AL SISTEMA
+        </button>
+        <div class="portada-footer">
+            <p>~ Recuerda: la rigurosidad es tu arma ~</p>
+        </div>
+    </div>
+</div>
+
+<!-- APLICACIÓN PRINCIPAL -->
+<div id="app" class="app hidden">
+    <div class="container">
+        <header>
+            <h1>🔐 PYTHON QUEST</h1>
+            <div class="subtitle">> MISIÓN: INFILTRATE THE SYSTEM &nbsp;|&nbsp; COMPLETA LOS DESAFÍOS</div>
+            <div class="progress-wrap">
+                <div class="progress-bar" id="prog-bar"></div>
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <div class="panel">
+                <div class="panel-title">📋 &nbsp;OBJECTIVE</div>
+                <div id="challenge-level"></div>
+                <div id="challenge-title"></div>
+                <div id="challenge-diff" class="difficulty"></div>
+                <div class="narrative" id="challenge-narrative"></div>
+                <div class="description" id="challenge-desc"></div>
+                <div class="hints-row">
+                    <button class="hint-btn" onclick="toggleHint('pista')">💡 Pista</button>
+                    <button class="hint-btn" onclick="toggleHint('sintaxis')">📖 Sintaxis</button>
+                </div>
+                <div class="hint-box pista"    id="hint-pista"></div>
+                <div class="hint-box sintaxis" id="hint-sintaxis"></div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-title">💻 &nbsp;TU CÓDIGO</div>
+                <textarea id="code-editor" placeholder="# Escribe tu solución aquí..." spellcheck="false"></textarea>
+                <button class="run-btn" id="run-btn" onclick="runCode()">▶ &nbsp;EJECUTAR CÓDIGO</button>
+            </div>
+        </div>
+
+        <div class="panel output-panel" style="margin-bottom:20px">
+            <div class="panel-title">📤 &nbsp;RESULTADO DE EJECUCIÓN</div>
+            <div id="output" style="color:#006600">// Escribe código y presiona ▶ EJECUTAR</div>
+            <div id="result-msg"></div>
+        </div>
+
+        <div class="nav-row">
+            <button class="nav-btn" id="btn-prev" onclick="goLevel(currentLevel - 1)">← ANTERIOR</button>
+            <div class="level-dots" id="level-dots"></div>
+            <button class="nav-btn" id="btn-next" onclick="goLevel(currentLevel + 1)" disabled>SIGUIENTE →</button>
+        </div>
+    </div>
+</div>
+
+<!-- PANTALLA FINAL -->
+<div id="final-screen" class="final-screen hidden">
+    <div class="final-content">
+        <div class="final-matrix-rain" id="final-matrix-rain"></div>
+        <div class="final-text">
+            <div class="final-title">🏆 MISIÓN COMPLETADA 🏆</div>
+            <div class="final-message">
+                <p>> Sistema infiltrado exitosamente.</p>
+                <p>> Todos los niveles deshabilitados.</p>
+                <p>> Acceso administrativo CONCEDIDO.</p>
+                <p>&nbsp;</p>
+                <p>> Bienvenido al sistema, agente.</p>
+                <p>> Eres parte del protocolo ahora.</p>
+            </div>
+        </div>
+        <button class="btn-reiniciar" onclick="location.reload()">🔄 REINICIAR MISIÓN</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
